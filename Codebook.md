@@ -67,11 +67,12 @@ However, for compatibility, a text only version is also provided.
 1. Extract in a local folder of your choice the run_analysis.R file
 2. Extract the original data you have downloaded from the above address into a local folder of
     your choice 
-3. run_analysis.R expects one text parameter with the folder name where the original data have been extracted. By default, the parameter is set to an empty string, indicating to look for the original data set files in the local folder where the run_analysis.R is run from. 
-The run_analysis.R returns a "data.frame" with the tidy data described here below.
+3. run_analysis.R expects one text parameter with the folder name where the original data have been extracted. 
+By default, the parameter is set to an empty string, which will make the script look for the original data set files in the current working direcotry of the Rstudio envornment.
+The run_analysis.R will return a "data.frame" with the tidy data described here below.
 it also saves the data frame in the files 
 "averagedDataSet.rda" in binary form and  
-"averagedDataSet.csv"  in csv text form. 
+"averagedDataSet.csv"  in csv text form, in the current Rstudio working directory. 
 
 ## Description of the variables 
 The data set includes 180 observations of 20 variables.
