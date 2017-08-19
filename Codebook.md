@@ -25,10 +25,12 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 Refer to the Readme.txt file included in the above dataset for details.
 
 ### Creating the tidy datafile
-IMPORTANT NOTE on point 3. of the "##Study Design and data processing":
+IMPORTANT NOTE on point 3. of the "Study Design and data processing":
 The raw data set includes data collected from the sensors embedded in a cellphone. Specifically it includes data from a three axis gyroscope and a three axis accelerometer. 
 In the context of this project, we are requested to extract only  "the mean and standard deviation for each measurement".
-The features_info.txt file of the original data describes all the provided data in details. Of the 561 columns of data, only 18 are actual direct sensor measurements that meet the requirements of point 3.  All other data are derived entities and are therefore not considered measurements. The actual variables are described here below. 
+The features_info.txt file of the original data describes all the provided data in details. Of the 561 columns of data, only 18 are actual direct sensor measurements that meet the requirements of point 3.  
+All other data are derived entities and are therefore not considered measurements. The actual variables are described in this document, under "Description of the variables"
+
 ## Guide to create the tidy data file
 Refer to the Readme.md file included in this repository for detailed instructions on how to use the included R script to create the tidy data files.
 Two data files are created by the provided R script, "run_analysis.R". They are two copies of the same data, one in text format and the other in binary format. Since most of the data included are of numeric  type (double type in fact),  it is more convenient to have files in binary data form, so to guarantee no loss of numerical precision when loading the data. 
@@ -43,7 +45,7 @@ it also saves the data frame in the files
 "averagedDataSet.rda" in binary form and  
 "averagedDataSet.csv"  in csv text form. 
 
-## Description of the variables in the averagedDataSet.csv and averagedDataSet.rda file
+## Description of the variables 
 The data set includes 180 observations of 20 variables.
                
              
