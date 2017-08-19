@@ -48,29 +48,16 @@ The reader is advised to make use of the comments in the code for a detailed und
 
 The actual names of the variables from the raw data set that are extracted are:
 
-tBodyAcc-mean()-X
-tBodyAcc-mean()-Y
-tBodyAcc-mean()-Z
+X|Y|Z
+-|-|-
 
-tBodyAcc-std()-X
-tBodyAcc-std()-Y
-tBodyAcc-std()-Z
+tBodyAcc-mean()-X | tBodyAcc-mean()-Y |tBodyAcc-mean()-Z
+tBodyAcc-std()-X|tBodyAcc-std()-Y|tBodyAcc-std()-Z
+tGravityAcc-mean()-X|tGravityAcc-mean()-Y|tGravityAcc-mean()-Z
+tGravityAcc-std()-X|tGravityAcc-std()-Y|tGravityAcc-std()-Z
+tBodyGyro-mean()-X|tBodyGyro-mean()-Y|tBodyGyro-mean()-Z
+tBodyGyro-std()-X|tBodyGyro-std()-Y|tBodyGyro-std()-Z
 
-tGravityAcc-mean()-X
-tGravityAcc-mean()-Y
-tGravityAcc-mean()-Z
-
-tGravityAcc-std()-X
-tGravityAcc-std()-Y
-tGravityAcc-std()-Z
-
-tBodyGyro-mean()-X
-tBodyGyro-mean()-Y
-tBodyGyro-mean()-Z
-
-tBodyGyro-std()-X
-tBodyGyro-std()-Y
-tBodyGyro-std()-Z
 
 ## Guide to create the tidy data file
 Refer to the Readme.md file included in this repository for detailed instructions on how to use the included R script to create the tidy data files.
