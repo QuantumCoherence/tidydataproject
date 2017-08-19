@@ -48,14 +48,14 @@ The reader is advised to make use of the comments in the code for a detailed und
 
 The actual names of the variables from the raw data set that are extracted are:
 
-X|Y|Z
--|-|-
-tBodyAcc-mean()-X | tBodyAcc-mean()-Y |tBodyAcc-mean()-Z
-tBodyAcc-std()-X|tBodyAcc-std()-Y|tBodyAcc-std()-Z
-tGravityAcc-mean()-X|tGravityAcc-mean()-Y|tGravityAcc-mean()-Z
-tGravityAcc-std()-X|tGravityAcc-std()-Y|tGravityAcc-std()-Z
-tBodyGyro-mean()-X|tBodyGyro-mean()-Y|tBodyGyro-mean()-Z
-tBodyGyro-std()-X|tBodyGyro-std()-Y|tBodyGyro-std()-Z
+ |X|Y|Z
+-|-|-|-
+mean body acceleration|tBodyAcc-mean()-X | tBodyAcc-mean()-Y |tBodyAcc-mean()-Z
+std dev body acceleration|tBodyAcc-std()-X|tBodyAcc-std()-Y|tBodyAcc-std()-Z
+mean gravity acceleration|tGravityAcc-mean()-X|tGravityAcc-mean()-Y|tGravityAcc-mean()-Z
+std dev gravity acceleration|tGravityAcc-std()-X|tGravityAcc-std()-Y|tGravityAcc-std()-Z
+mean gyro rate|tBodyGyro-mean()-X|tBodyGyro-mean()-Y|tBodyGyro-mean()-Z
+std dev gyro rate|tBodyGyro-std()-X|tBodyGyro-std()-Y|tBodyGyro-std()-Z
 
 
 ## Guide to create the tidy data file
