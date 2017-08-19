@@ -50,7 +50,6 @@ The actual names of the variables from the raw data set that are extracted are:
 
 X|Y|Z
 -|-|-
-
 tBodyAcc-mean()-X | tBodyAcc-mean()-Y |tBodyAcc-mean()-Z
 tBodyAcc-std()-X|tBodyAcc-std()-Y|tBodyAcc-std()-Z
 tGravityAcc-mean()-X|tGravityAcc-mean()-Y|tGravityAcc-mean()-Z
