@@ -1,7 +1,8 @@
-Peer-graded Assignment: Getting and Cleaning Data Course Project
+# Peer-graded Assignment: 
+# Getting and Cleaning Data Course Project
 ================================================================
 Author: Paolo Bernasconi
-Date:  ?Wednesday, ?August ?16, ?2017
+Date:   Wednesday,  August  16,  2017
 
 ## Project Description
 Collect, work with, and clean a data set from the  
@@ -40,6 +41,7 @@ The run_analysis.R returns a "data.frame" with the tidy data described here belo
 it also saves the data frame in the files 
 "averagedDataSet.rda" in binary form and  
 "averagedDataSet.csv"  in csv text form. 
+
 ## Description of the variables in the averagedDataSet.csv and averagedDataSet.rda file
 The data set includes 180 observations of 20 variables.
                
