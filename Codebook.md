@@ -48,7 +48,7 @@ The reader is advised to make use of the comments in the code for a detailed und
 
 The actual names of the variables from the raw data set that are extracted are:
 
- |X|Y|Z
+entity|X|Y|Z
 -|-|-|-
 mean body acceleration|tBodyAcc-mean()-X | tBodyAcc-mean()-Y |tBodyAcc-mean()-Z
 std dev body acceleration|tBodyAcc-std()-X|tBodyAcc-std()-Y|tBodyAcc-std()-Z
