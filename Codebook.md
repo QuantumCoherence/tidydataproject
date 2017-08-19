@@ -42,17 +42,35 @@ In total only nine entities are directly measured: three from the body accelerat
 
 Any other further processing of the data is a derived entity and therefore outside of the scope of this project.  As we are interested only in the standard deviation and mean of these nine measurements, we only have to extract  18 variables from the 561 available. 
 
-The code of the script run_analysis.R that extracts the request data is on lines 50 to 62 of the run_analysis.R code. 
-Refer to the comments in the code for a detailed understanding.
+The code of the script run_analysis.R that extracts the requested data is on lines 50 to 62 of the run_analysis.R code. 
+
+The reader is advised to make use of the comments in the code for a detailed understanding.
 
 The actual names of the variables from the raw data set that are extracted are:
 
- tBodyAcc-mean()-X     tBodyAcc-mean()-Y      tBodyAcc-mean()-Z     
- tBodyAcc-std()-X          tBodyAcc-std()-Y           tBodyAcc-std()-Z
- tGravityAcc-mean()-X  tGravityAcc-mean()-Y  tGravityAcc-mean()-Z
- tGravityAcc-std()-X       tGravityAcc-std()-Y      tGravityAcc-std()-Z
-tBodyGyro-mean()-X     tBodyGyro-mean()-Y   tBodyGyro-mean()-Z
-tBodyGyro-std()-X         tBodyGyro-std()-Y        tBodyGyro-std()-Z
+tBodyAcc-mean()-X
+tBodyAcc-mean()-Y
+tBodyAcc-mean()-Z
+
+tBodyAcc-std()-X
+tBodyAcc-std()-Y
+tBodyAcc-std()-Z
+
+tGravityAcc-mean()-X
+tGravityAcc-mean()-Y
+tGravityAcc-mean()-Z
+
+tGravityAcc-std()-X
+tGravityAcc-std()-Y
+tGravityAcc-std()-Z
+
+tBodyGyro-mean()-X
+tBodyGyro-mean()-Y
+tBodyGyro-mean()-Z
+
+tBodyGyro-std()-X
+tBodyGyro-std()-Y
+tBodyGyro-std()-Z
 
 ## Guide to create the tidy data file
 Refer to the Readme.md file included in this repository for detailed instructions on how to use the included R script to create the tidy data files.
