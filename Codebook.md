@@ -26,16 +26,27 @@ Refer to the Readme.txt file included in the above dataset for details.
 
 ### Creating the tidy datafile
 IMPORTANT NOTE on point 3. of the "Study Design and data processing":
+
 The raw data set includes data collected from the sensors embedded in a cellphone. Specifically it includes data from a three axis gyroscope and a three axis accelerometer. 
+
 In the context of this project, we are requested to extract only "the mean and standard deviation for each measurement".
+
 The features_info.txt file of the original data describes all the 561 provided variables in details, of which only 18 meet the requirements of point 3.
+
 To understand what are measurements in this context, it is useful to consider that gyroscopes and accelerometer measure acceleration and rotation rate in the time domain on three perpendicular axes for each sensor. 
+
 In the raw dataset these measurements are first digitally filtered to eliminate noise.
 The acceleration measurements are then by mean of frequency analysis separated in body and gravity accelerations. 
+
 In total only nine entities are directly measured: three from the body acceleration (one for each axis),  three from the gravity acceleration (one for each axis) and three from the gyroscope rotation rates (one for each axis). 
+
 Any other further processing of the data is a derived entity and therefore outside of the scope of this project.  As we are interested only in the standard deviation and mean of these nine measurements, we only have to extract  18 variables from the 561 available. 
-The code of the script run_analysis.R that extracts the request data is on lines 50 to 62 of the run_analysis.R code. Refer to the comments in the code for a detailed understanding.
+
+The code of the script run_analysis.R that extracts the request data is on lines 50 to 62 of the run_analysis.R code. 
+Refer to the comments in the code for a detailed understanding.
+
 The actual names of the variables from the raw data set that are extracted are:
+
  tBodyAcc-mean()-X     tBodyAcc-mean()-Y      tBodyAcc-mean()-Z     
  tBodyAcc-std()-X          tBodyAcc-std()-Y           tBodyAcc-std()-Z
  tGravityAcc-mean()-X  tGravityAcc-mean()-Y  tGravityAcc-mean()-Z
