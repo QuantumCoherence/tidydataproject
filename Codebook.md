@@ -1,5 +1,5 @@
-"Peer-graded Assignment: Getting and Cleaning Data Course Project"
-==============================================================================
+Peer-graded Assignment: Getting and Cleaning Data Course Project
+================================================================
 Author: Paolo Bernasconi
 Date:  ?Wednesday, ?August ?16, ?2017
 
