@@ -31,16 +31,16 @@ The raw data set includes data collected from the sensors embedded in a cellphon
 
 In the context of this project, we are requested to extract only "the mean and standard deviation for each measurement".
 
-The features_info.txt file of the original data describes all the 561 provided variables in details, of which only 18 meet the requirements of point 3.
+The features_info.txt file of the original data describes in details all the 561 provided variables, of which only 18 meet the requirements of point 3.
 
-To understand what are measurements in this context, it is useful to consider that gyroscopes and accelerometer measure acceleration and rotation rate in the time domain on three perpendicular axes for each sensor. 
+To understand what measurements are in this context, it is useful to notice that gyroscopes and accelerometer measure acceleration and rotation rate in the time domain on three perpendicular axes for each sensor. 
 
 In the raw dataset these measurements are first digitally filtered to eliminate noise.
 The acceleration measurements are then by mean of frequency analysis separated in body and gravity accelerations. 
 
 In total only nine entities are directly measured: three from the body acceleration (one for each axis),  three from the gravity acceleration (one for each axis) and three from the gyroscope rotation rates (one for each axis). 
 
-Any other further processing of the data is a derived entity and therefore outside of the scope of this project.  As we are interested only in the standard deviation and mean of these nine measurements, we only have to extract  18 variables from the 561 available. 
+Any other further processing of the data is a derived entity and therefore outside of the scope of this project.  As we are interested only in the standard deviation and mean of these nine measurements, we only have to extract 18 variables from the 561 available. 
 
 The code of the script run_analysis.R that extracts the requested data is on lines 50 to 62 of the run_analysis.R code. 
 
@@ -64,10 +64,10 @@ Two data files are created by the provided R script, "run_analysis.R". They are 
 However, for compatibility, a text only version is also provided. 
 
 ### Cleaning of the data
-1. Extract in a local folder of your choice the run_analysis.R file
+1. Extract the run_analysis.R file into a local folder of your choice
 2. Extract the original data you have downloaded from the above address into a local folder of
     your choice 
-3. run_analysis.R expects one text parameter with the folder name where the original data have been extracted. 
+3. The run_analysis.R is a function that expects one text parameter with the folder name where the original data have been extracted. 
 By default, the parameter is set to an empty string, which will make the script look for the original data set files in the current working direcotry of the Rstudio envornment.
 The run_analysis.R will return a "data.frame" with the tidy data described here below.
 it also saves the data frame in the files 
@@ -81,7 +81,8 @@ The data set includes 180 observations of 20 variables.
 ### Activty
 
 -  Class "Character"
- - 6 levels :  "LAYING"
+ - 6 levels :  
+        "LAYING"
         "SITTING"
         "STANDING"
         "WALKING"
@@ -230,4 +231,4 @@ The data set includes 180 observations of 20 variables.
 
 
 ## Sources
-Stockexchange.com for R-coding support and sample of this Codebook
+Stockexchange.com for R-coding support and a sample outline of this Codebook
