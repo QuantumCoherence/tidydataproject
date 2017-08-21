@@ -9,7 +9,7 @@ getting-and-cleaning-data-course-project
  3. Downald the run_analysis.R script to a local folder of your choice.
  Example:
  > setwd("workfolder")
- >>>download FUCI HAR Dataset.zip
+ >>> download FUCI HAR Dataset.zip
  unzip "FUCI HAR Dataset.zip"
  list.dir() will return the following folders and subfolders of the "tidydataproject" folder:
  > list.dirs()
@@ -29,10 +29,18 @@ returns a data.frame with the tidy dataset.
 
 **Usage**
 
-run_analsys(path = (path = ".")
+run_analsys(path = ".")
 
 **Arguments**
 path  : path (can be relative to the location of the run_analysis.R file) to the "UCI HAR Dataset" folder
 
-Example: continuiong the example from above , assuming run_analysis.R has been save in the "workfolder" direcotry
+Example: 
+Continuiong the example from above, assuming run_analysis.R has been save in the "workfolder" direcotry
+
 tidydataset <- run_analysis()
+
+will return the tidy dataset into the tidydataset data.frame
+
+**Notes**
+Two files will be created , one bianry and thw other in text csv format, 
+named respectivley averagedDataSet.rda and averagedDataSet.csv
