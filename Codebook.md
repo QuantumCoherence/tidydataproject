@@ -31,7 +31,7 @@ The raw data set includes data collected from the sensors embedded in a cellphon
 
 In the context of this project, we are requested to extract only "the mean and standard deviation for each measurement".
 
-The features_info.txt file of the original data describes in details all the 561 provided variables, of which only 18 meet the requirements of point 3.
+The features_info.txt file of the original data describes in details all the 561 provided variables, of which only 18 meet the requirements of point 3. 
 
 To understand what measurements are in this context, it is useful to notice that gyroscopes and accelerometer measure acceleration and rotation rate in the time domain on three perpendicular axes for each sensor. 
 
