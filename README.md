@@ -64,12 +64,12 @@ named respectivley averagedDataSet.rda and averagedDataSet.csv
 
  1. **Load Files from raw dataset**
  
-    > traindata <- X_train.txt
-    > testdata  <- X_test.txt 
-    > trainactivity <- y_train.txt
-    > testactivity  <- y_test.txt
-    > trainsubjects <- subject_train.txt
-    > testsubjects  <- subject_test.txt
+    1 traindata <- X_train.txt
+    2 testdata  <- X_test.txt 
+    3 trainactivity <- y_train.txt
+    4 testactivity  <- y_test.txt
+    5 trainsubjects <- subject_train.txt
+    6 testsubjects  <- subject_test.txt
     
  2. Column bind test subjects, ativity and data into a test data.frame
  3. Column bing train sbject, activity and data into a train data.frame
