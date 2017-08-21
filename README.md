@@ -62,7 +62,22 @@ Two files will be created , one binary and the other in text csv format,
 named respectivley _averagedDataSet.rda_ and _averagedDataSet.csv_
 
 ## Data cleaining Process
-
+```sh
+  #Load Files from provided directory - see readme for required dataset
+  
+    #Train Data
+    traindata <- fread(file=file.path(trainfolder,"X_train.txt"), sep = " ", data.table = FALSE, header = FALSE)
+    #Test Data
+    testdata <- fread(file=file.path(testfolder,"X_test.txt"), sep = " ", data.table = FALSE, header = FALSE)
+    #Train Activity
+    trainactivity <- fread(file=file.path(trainfolder,"y_train.txt"), sep = " ", data.table = FALSE, header = FALSE)
+    #Test Activty 
+    testactivity <- fread(file=file.path(testfolder,"y_test.txt"), sep = " ", data.table = FALSE, header = FALSE)
+    #Train Subjects
+    trainsubjects <- fread(file=file.path(trainfolder,"subject_train.txt"), sep = " ", data.table = FALSE, header = FALSE)
+    #Test Subject
+    testsubjects <- fread(file=file.path(testfolder,"subject_test.txt"), sep = " ", data.table = FALSE, header = FALSE)
+```
  1. **Load Files from raw dataset**
  
     1. traindata <- X_train.txt
