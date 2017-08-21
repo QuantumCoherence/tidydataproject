@@ -64,7 +64,9 @@ named respectivley _averagedDataSet.rda_ and _averagedDataSet.csv_
 ## Data cleaining Process - Step by Step with code
 
  0. Setup folder names and load packages
-
+```sh
+   run_analysis(path = ".')
+```
 ```sh
    # See Readme.md for usage instructions
       trainfolder <- file.path(path, "UCI HAR Dataset/train")
@@ -116,7 +118,7 @@ named respectivley _averagedDataSet.rda_ and _averagedDataSet.csv_
     #read variables name from features.txt file
     features <- read.csv(featurefile,stringsAsFactors = FALSE, sep = " ", header = FALSE)
     features <-tbl_df(features)
-    # filter measurements on the mean and standard deviation - See CodeBook.md for details
+    # filter measurements on the mean and standard deviation - **See CodeBook.md for details**
       #select variables with either mean() or std(0 that start with t only)
       set1 <- filter(features, grepl("^t.*(mean()|std()).*", features$V2))
       #select variables that include either Jerk or Mag and do start with t only
