@@ -39,8 +39,9 @@ run_analysis takes as input the folder location where the raw dataset top folder
 returns a data.frame with the tidy dataset. 
 
 **Usage**
-
+```sh
 run_analsys(path = ".")
+```
 
 **Arguments**
 
@@ -64,12 +65,12 @@ named respectivley _averagedDataSet.rda_ and _averagedDataSet.csv_
 
  1. **Load Files from raw dataset**
  
-    1 traindata <- X_train.txt
-    2 testdata  <- X_test.txt 
-    3 trainactivity <- y_train.txt
-    4 testactivity  <- y_test.txt
-    5 trainsubjects <- subject_train.txt
-    6 testsubjects  <- subject_test.txt
+    1. traindata <- X_train.txt
+    2. testdata  <- X_test.txt 
+    3. trainactivity <- y_train.txt
+    4. testactivity  <- y_test.txt
+    5. trainsubjects <- subject_train.txt
+    6. testsubjects  <- subject_test.txt
     
  2. Column bind test subjects, ativity and data into a test data.frame
  3. Column bing train sbject, activity and data into a train data.frame
