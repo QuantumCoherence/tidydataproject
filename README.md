@@ -18,6 +18,7 @@ getting-and-cleaning-data-course-project
   -- list.dir() will return the following folders and subfolders of the "tidydataproject" folder:
   
  `<list.dirs()>`
+ 
 `<[1] "."                                        "./UCI HAR Dataset"                       >`
 
 `<[3] "./UCI HAR Dataset/test"                   "./UCI HAR Dataset/test/Inertial Signals" >`
@@ -29,11 +30,11 @@ getting-and-cleaning-data-course-project
 
    -- list.files() will return following files 
    
-<`<list.files()>`
+`<list.files()>`
 
-[1] "activity_labels.txt" "features.txt"        "features_info.txt"   "README.txt"         >`
+`<[1] "activity_labels.txt" "features.txt"        "features_info.txt"   "README.txt"         >`
 
-[5] "test"                "train"                                                          >`
+`<[5] "test"                "train"                                                          >`
 
 
 ### using run_analysis.R
