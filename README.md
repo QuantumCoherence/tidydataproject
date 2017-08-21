@@ -56,9 +56,9 @@ will return the tidy dataset into the tidydataset data.frame
 
 **Notes**
 
-Two files will be created , one bianry and thw other in text csv format, 
+Two files will be created , one binary and the other in text csv format,
 
-named respectivley averagedDataSet.rda and averagedDataSet.csv
+named respectivley _averagedDataSet.rda_ and _averagedDataSet.csv_
 
 ## Data cleaining Process
 
