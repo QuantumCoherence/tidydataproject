@@ -34,6 +34,7 @@ $ list.files()
 
 ### using run_analysis.R
 **Description** 
+
 run_analysis takes as input the folder location where the raw dataset top folder is located and 
 returns a data.frame with the tidy dataset. 
 
@@ -42,15 +43,19 @@ returns a data.frame with the tidy dataset.
 run_analsys(path = ".")
 
 **Arguments**
+
 path  : path (can be relative to the location of the run_analysis.R file) to the "UCI HAR Dataset" folder
 
 Example: 
+
 Continuiong the example from above, assuming run_analysis.R has been save in the "workfolder" direcotry
-
-tidydataset <- run_analysis()
-
+```sh
+$ tidydataset <- run_analysis()
+```
 will return the tidy dataset into the tidydataset data.frame
 
 **Notes**
+
 Two files will be created , one bianry and thw other in text csv format, 
+
 named respectivley averagedDataSet.rda and averagedDataSet.csv
