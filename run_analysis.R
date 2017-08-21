@@ -1,20 +1,10 @@
-run_analysis <- function(directory ="") {
+run_analysis <- function(path = ".") {
   # See Readme.md for usage instructions
-  if(directory !="") {
-      folder <- file.path(directory)
-      trainfolder <- file.path(directory, "train")
-      testfolder  <- file.path(directory, "test")
-      featurefile <- file.path(folder,"features.txt")
-      activityfile <-file.path(folder,"activity_labels.txt")
-      averagedfile <-file.path(folder,"averagedDataSet.")
-  } else{
-      folder <- directory
-      trainfolder <- "train"
-      testfolder  <- "test"
-      featurefile <-"features.txt"
-      activityfile <-"activity_labels.txt"
-      averagedfile <-"averagedDataSet."
-  }
+      trainfolder <- file.path(path, "UCI HAR Dataset/train")
+      testfolder  <- file.path(path, "UCI HAR Dataset/test")
+      featurefile <- file.path(path, "UCI HAR Dataset/features.txt")
+      activityfile <-file.path(path, "UCI HAR Dataset/activity_labels.txt")
+      averagedfile <-file.path(path, "UCI HAR Dataset/averagedDataSet.")
 
     # R packages requirements
   library(data.table)
