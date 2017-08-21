@@ -62,7 +62,7 @@ named respectivley averagedDataSet.rda and averagedDataSet.csv
 
 ## Data cleaining Process
 
- **1. Load Files from raw dataset**
+ 1. Load Files from raw dataset
  
     1a. traindata <- X_train.txt
     1b. testdata  <- X_test.txt 
@@ -73,24 +73,25 @@ named respectivley averagedDataSet.rda and averagedDataSet.csv
     
  2. Column bind test subjects, ativity and data into a test data.frame
  3. Column bing train sbject, activity and data into a train data.frame
- **4. Merges rows of train and test data sets into a single _completedata_ data.frame** 
+ 4. Merges rows of train and test data sets into a single _completedata_ data.frame
  5. Name the column of the subject ids (in the _completedata_ data.frame) "Subject_ID" and the column of the activities, "Activity"
- **6. Extracts only the measurements on the mean and standard deviation for each measurement.**
+ 6. Extracts only the measurements on the mean and standard deviation for each measurement.
  
     6.1 Load variable names from features.text file  
-    6.2 Filter measurements on the mean and standard deviation - **See CodeBook.md for details**
-    
+    6.2 Filter measurements on the mean and standard deviation 
+      - **See CodeBook.md for details**
+          
       6.2a Select variables with either mean() or std(0 that start with "t" only)
       6.2b Select variables that include either Jerk or Mag and do start with "t" only
       6.2c The desired feature variables are included in the set difference between 6.2a and 6.2b
       
-    6.3 Select the filtered measurement column from the _completedata_ and update it
+    6.3 Select the filtered measurement column from the _completedata_ and update it    
     6.4 Upate variable names of _completedata_ with descritives names (see CodeBook.md)
 
- **7. Load activity labels key -> value map **
+ 7. Load activity labels key -> value map
     7.1 Replace numerics in the "activity" columsn with the activity charater strings
     
- **8. Create the new tidy data set with the averaged value of the
+ 8. Create the new tidy data set with the averaged value of the
     
     #update variable names
     variablenames <- sapply(variablenames,FUN=function(x){paste("Averaged", x,sep="")})
