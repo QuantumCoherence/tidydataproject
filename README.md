@@ -8,8 +8,8 @@ getting-and-cleaning-data-course-project
     https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
  3. Downald the run_analysis.R script to a local folder of your choice.
  Example:
- > setwd("workfolder")
- >>> download FUCI HAR Dataset.zip
+  setwd("workfolder")
+  download FUCI HAR Dataset.zip
  unzip "FUCI HAR Dataset.zip"
  list.dir() will return the following folders and subfolders of the "tidydataproject" folder:
  > list.dirs()
