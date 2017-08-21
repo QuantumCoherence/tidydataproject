@@ -63,7 +63,6 @@ named respectivley averagedDataSet.rda and averagedDataSet.csv
 ## Data cleaining Process
 
  **1. Load Files from raw dataset**
- 
     1a. traindata <- X_train.txt
     1b. testdata  <- X_test.txt 
     1c. trainactivity <- y_train.txt
