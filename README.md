@@ -112,13 +112,15 @@ named respectivley _averagedDataSet.rda_ and _averagedDataSet.csv_
 
 3. **Extracts only the measurements on the mean and standard deviation for each measurement.**
 
+**See CodeBook.md for details about which variable were selected **
+
 ```sh
     #Load variable names from features.text file and select the requird subset of variables 
     
     #read variables name from features.txt file
     features <- read.csv(featurefile,stringsAsFactors = FALSE, sep = " ", header = FALSE)
     features <-tbl_df(features)
-    # filter measurements on the mean and standard deviation - **See CodeBook.md for details**
+    # filter measurements on the mean and standard deviation - 
       #select variables with either mean() or std(0 that start with t only)
       set1 <- filter(features, grepl("^t.*(mean()|std()).*", features$V2))
       #select variables that include either Jerk or Mag and do start with t only
