@@ -61,10 +61,26 @@ Two files will be created , one binary and the other in text csv format,
 
 named respectivley _averagedDataSet.rda_ and _averagedDataSet.csv_
 
-## Data cleaining Process
+## Data cleaining Process - Step by Step with code
+
+ 0. Setup folder names and load packages
+
 ```sh
-  #Load Files from provided directory - see readme for required dataset
-  
+   # See Readme.md for usage instructions
+      trainfolder <- file.path(path, "UCI HAR Dataset/train")
+      testfolder  <- file.path(path, "UCI HAR Dataset/test")
+      featurefile <- file.path(path, "UCI HAR Dataset/features.txt")
+      activityfile <-file.path(path, "UCI HAR Dataset/activity_labels.txt")
+      averagedfile <-file.path(path, "UCI HAR Dataset/averagedDataSet.")
+
+    # R packages requirements
+  library(data.table)
+  library(dplyr)
+```
+
+ 1. **Load Files from raw dataset**
+
+```sh
     #Train Data
     traindata <- fread(file=file.path(trainfolder,"X_train.txt"), sep = " ", data.table = FALSE, header = FALSE)
     #Test Data
@@ -78,36 +94,62 @@ named respectivley _averagedDataSet.rda_ and _averagedDataSet.csv_
     #Test Subject
     testsubjects <- fread(file=file.path(testfolder,"subject_test.txt"), sep = " ", data.table = FALSE, header = FALSE)
 ```
- 1. **Load Files from raw dataset**
- 
-    1. traindata <- X_train.txt
-    2. testdata  <- X_test.txt 
-    3. trainactivity <- y_train.txt
-    4. testactivity  <- y_test.txt
-    5. trainsubjects <- subject_train.txt
-    6. testsubjects  <- subject_test.txt
     
- 2. Column bind test subjects, ativity and data into a test data.frame
- 3. Column bing train sbject, activity and data into a train data.frame
- 4. **Merges rows of train and test data sets into a single _completedata_ data.frame**
- 5. Name the column of the subject ids (in the _completedata_ data.frame) "Subject_ID" and the column of the activities, "Activity"
- 6. **Extracts only the measurements on the mean and standard deviation for each measurement.**
- 
-    > Load variable names from features.text file  
-    > Filter measurements on the mean and standard deviation 
-      >>**See CodeBook.md for details**  
-      >> Select variables with either mean() or std(0 that start with "t" only)
-      >> Select variables that include either Jerk or Mag and do start with "t" only
-      >> The desired feature variables are included in the set difference between 6.2a and 6.2b
-      
-    > Select the filtered measurement column from the _completedata_ and update it    
-    > Upate variable names of _completedata_ with descritives names (see CodeBook.md)
+2.  Merges rows of train and test data sets
 
- 7. Load activity labels key -> value map
-    Replace numerics in the "activity" columsn with the activity charater strings
+```sh
+    # bind subjects and ativity columns to corresponding data set
+    testcomplete <- cbind(testsubjects, testactivity, testdata)
+    traincomplete <- cbind(trainsubjects, trainactivity, traindata)
+    # merge rows of data sets
+    completedata <- rbind(testcomplete, traincomplete)
+    names(completedata)[1:2] <- c("Subject_ID","Activity")
+    #remove unncessary data frames from script
+    rm(traindata, testdata, trainactivity, testactivity, trainsubjects, testsubjects,testcomplete, traincomplete)    
+```
+
+3. **Extracts only the measurements on the mean and standard deviation for each measurement.**
+
+```sh
+    #Load variable names from features.text file and select the requird subset of variables 
     
- 8. Create the new tidy data set with the averaged value of the
-    
+    #read variables name from features.txt file
+    features <- read.csv(featurefile,stringsAsFactors = FALSE, sep = " ", header = FALSE)
+    features <-tbl_df(features)
+    # filter measurements on the mean and standard deviation - See CodeBook.md for details
+      #select variables with either mean() or std(0 that start with t only)
+      set1 <- filter(features, grepl("^t.*(mean()|std()).*", features$V2))
+      #select variables that include either Jerk or Mag and do start with t only
+      set2 <- filter(features, grepl("^t.*(Jerk|Mag).*", features$V2))
+      #the desired feature variables are included in the set difference between set1 and sets
+      features <- setdiff(set1, set2)
+    #increase column indicies by 2 to reflect the added column with subject ids and activity data
+    features$V1 <- features$V1 + 2
+ ```
+ 
+ ```sh
+     #select the filtered measurement column 
+    completedata <- select(completedata, c(1, 2, features$V1))
+    #upate variable names with descritives names
+    features$V2 <- strsplit(features$V2,"-")
+    variablenames <- lapply(features$V2,FUN=function(x){if(is.na(x[3])) paste(x[2], x[1],sep="") else paste(x[2], x[1], x[3],sep="")})
+    variablenames <- gsub("mean[(][)]t", "Mean", variablenames)  
+                     # replace "mean()" with "Mean" and drop the letter t in front just after mean()
+    variablenames <- gsub("std[(][)]t", "StdDev", variablenames) 
+                     # Replace "std()" with "StdDev"and drop the letter t in front just after std()
+```
+
+```sh
+    # assign variable names to columns
+    names(completedata)[3:20] <- variablenames
+    # Load activity labels key -> value map
+    activitylabels <- fread(activityfile, sep = " ", data.table = FALSE, header = FALSE)
+    # Replace numerics with character values from activitylabels 
+    completedata[["Activity"]] <- activitylabels[match(completedata[['Activity']], activitylabels[['V1']]), 'V2']
+```
+
+4. Create new tidy data set with averaged means and standard deviations 
+```sh
     #update variable names
     variablenames <- sapply(variablenames,FUN=function(x){paste("Averaged", x,sep="")})
     names(completedata)[3:20] <- variablenames
@@ -117,3 +159,5 @@ named respectivley _averagedDataSet.rda_ and _averagedDataSet.csv_
     save(averagedDataSet, file = paste(averagedfile,"rda", sep=""))
     write.csv(averagedDataSet,file = paste(averagedfile, "csv",sep=""))
     averagedDataSet
+```
+
