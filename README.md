@@ -110,8 +110,7 @@ named respectivley _averagedDataSet.rda_ and _averagedDataSet.csv_
     rm(traindata, testdata, trainactivity, testactivity, trainsubjects, testsubjects,testcomplete, traincomplete)    
 ```
 
-3. **Extracts only the measurements on the mean and standard deviation for each measurement.**
-
+3. **Extracts only the measurements on the mean and standard deviation for each measurement**
 **See CodeBook.md for details about which variable were selected **
 
 ```sh
