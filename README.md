@@ -114,6 +114,7 @@ named respectivley _averagedDataSet.rda_ and _averagedDataSet.csv_
 
 __See CodeBook.md for details about which variable were selected__
 
+
 ```sh
     #Load variable names from features.text file and select the requird subset of variables 
     
