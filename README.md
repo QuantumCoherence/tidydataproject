@@ -9,23 +9,21 @@ getting-and-cleaning-data-course-project
  3. Downald the run_analysis.R script to a local folder of your choice.
  
  Example:
- I think you should use an
-`<addr>` element here instead.
-
- setwd("workfolder")
+ `<setwd("workfolder")>`
   -- download FUCI HAR Dataset.zip
- unzip "FUCI HAR Dataset.zip"
- list.dir() will return the following folders and subfolders of the "tidydataproject" folder:
- list.dirs()
+  -- unzip "FUCI HAR Dataset.zip"
+  -- list.dir() will return the following folders and subfolders of the "tidydataproject" folder:
+ `<list.dirs()
 [1] "."                                        "./UCI HAR Dataset"                       
 [3] "./UCI HAR Dataset/test"                   "./UCI HAR Dataset/test/Inertial Signals" 
 [5] "./UCI HAR Dataset/train"                  "./UCI HAR Dataset/train/Inertial Signals"
-> setwd("FUCI HAR Dataset")
-list.files() will return following files 
-> list.files()
+>`
+`<setwd("FUCI HAR Dataset")>`
+   -- list.files() will return following files 
+`<list.files()
 [1] "activity_labels.txt" "features.txt"        "features_info.txt"   "README.txt"         
 [5] "test"                "train"              
-> 
+>`
 ### using run_analysis.R
 **Description** 
 run_analysis takes as input the folder location where the raw dataset top folder is located and 
